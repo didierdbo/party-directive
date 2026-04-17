@@ -1,0 +1,63 @@
+[project]
+name = "party-directive"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov",
+    "ruff>=0.6",
+]
+rl = [
+    "gymnasium>=0.29",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = [
+    ".venv",
+    "build",
+    "dist",
+]
+
+[tool.ruff.lint]
+# Enabled rule sets (https://docs.astral.sh/ruff/rules/)
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes (undefined names, unused imports)
+    "I",    # isort (import sorting)
+    "N",    # pep8-naming
+    "UP",   # pyupgrade (modernize syntax for target version)
+    "B",    # flake8-bugbear (common bug patterns)
+    "SIM",  # flake8-simplify (simpler code suggestions)
+    "C4",   # flake8-comprehensions (better list/dict/set comprehensions)
+    "PTH",  # flake8-use-pathlib (prefer pathlib over os.path)
+    "RUF",  # Ruff-specific rules
+]
+ignore = [
+    "E501",  # line too long — handled by the formatter, not the linter
+    "B008",  # function call in default argument — fine for dataclass factories
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Tests can use magic numbers and assertions freely
+"tests/**/*.py" = ["PLR2004", "S101"]
+"python/**/*.py" = ["PLR2004", "S101"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["party_directive"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+docstring-code-format = true
