@@ -49,6 +49,7 @@ def create_new_games_state():
         stress=20,
         current_mission_id=None,
         conditions=[],
+        recovery_clock_ids={},
         mission_history=[],
     )
 
@@ -88,6 +89,7 @@ def create_new_games_state():
         max_characters=4,
         rewards_on_success={"gold": 10},
         consequences_on_failure={"stress": 20},
+        consequences_on_partial={},
         default_priority=1,
     )
 
@@ -96,7 +98,8 @@ def create_new_games_state():
         map_nodes={"1": map_node},
         factions=[],
         active_missions={},
-        active_threat_clocks=[],
+        active_threat_clocks={},
+        active_recovery_clocks={},
         game_hour=0,
         action_templates={"intro": action_card},
         event_log=[],

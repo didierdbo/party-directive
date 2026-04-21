@@ -56,6 +56,7 @@ class Character:
     stress: int
     current_mission_id: str | None
     conditions: list[str]
+    recovery_clock_ids: dict[str, str]
     mission_history: list[str]
 
 
@@ -87,6 +88,7 @@ class ActionCard:
     max_characters: int
     rewards_on_success: dict
     consequences_on_failure: dict
+    consequences_on_partial: dict
     default_priority: int
 
 
@@ -140,7 +142,8 @@ class GameState:
     map_nodes: dict[str, MapNode]
     factions: list[Faction]
     active_missions: dict[str, Mission]
-    active_threat_clocks: list[Clock]
+    active_threat_clocks: dict[str, Clock]
+    active_recovery_clocks: dict[str, Clock]
     game_hour: int
     action_templates: dict[str, ActionCard]
     event_log: list[dict]

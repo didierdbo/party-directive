@@ -102,6 +102,7 @@ def create_character(
         stress=20,
         current_mission_id=None,
         conditions=["wounded"],
+        recovery_clock_ids={},
         mission_history=[],
     )
     if is_empty:
@@ -128,6 +129,7 @@ def create_action():
         max_characters=4,
         rewards_on_success={"gold": 10},
         consequences_on_failure={"stress": 20},
+        consequences_on_partial={},
         default_priority=1,
     )
     return action_card

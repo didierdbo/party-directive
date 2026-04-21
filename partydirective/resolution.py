@@ -1,9 +1,13 @@
 from typing import Literal, Protocol
 
-from partydirective.models import ActionCard, Character, Resolution
+from partydirective.models import ActionCard, Character, Resolution, Stat
 
 STRESS_MODIFIERS = {"composed": 0, "strained": -1, "stressed": -2, "breaking": -3}
-CONDITION_MODIFIERS: dict[str, int] = {"wounded": -2, "exhausted": -1}
+CONDITION_MODIFIERS: dict[str, dict[Stat | None, int]] = {
+    "wounded":        {None: -2},              # None = applies to all stats
+    "exhausted":      {None: -1},
+    "sprained_ankle": {Stat.DEX: -1},          # stat-specific
+}
 
 
 class RollRNG(Protocol):
@@ -49,7 +53,10 @@ def compute_modifiers(
             modifiers.append(item.stat_bonus[action.stat_tested])
 
     for condition in character.conditions:
-        modifiers.append(CONDITION_MODIFIERS[condition])
+        penalties = CONDITION_MODIFIERS[condition]
+        for stat_key, value in penalties.items():
+            if stat_key is None or stat_key == action.stat_tested:
+                modifiers.append(value)
 
     for tag in action.tags:
         for trait in character.traits:
