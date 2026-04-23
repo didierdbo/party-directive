@@ -54,5 +54,6 @@
     },
     // ── Ruff: lint + format, manual-first (no auto-fix on save) ──
     "ruff.nativeServer": "on",
-    "ruff.organizeImports": true
+    "ruff.organizeImports": true,
+    "cSpell.enabled": false
 }

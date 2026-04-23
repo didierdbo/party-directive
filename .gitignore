@@ -61,5 +61,15 @@ checkpoints/
 
 # Jupyter (if notebooks are added later)
 .ipynb_checkpoints/
-</content>
-</invoke>
+
+# --- React (web/) ---
+web/node_modules/
+web/dist/
+web/coverage/
+web/.vite/
+web/.turbo/
+web/*.tsbuildinfo
+web/npm-debug.log*
+web/yarn-debug.log*
+web/yarn-error.log*
+web/pnpm-debug.log*

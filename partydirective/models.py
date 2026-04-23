@@ -22,11 +22,11 @@ class Background:
 @dataclass(slots=True)
 class Trait:
     name: str
-    roll_modifier: dict[str, int]
+    roll_modifier: dict[Literal["risky", "safe", "loot"], int]
     menu_tag_boosted: list[str]
     menu_tag_suppressed: list[str]
     stress_modifier: int
-    vote_tendency: str
+    vote_tendency: Literal["keep", "risk assessment", "banish on cost"]
     contradicts: list[str]
 
 
@@ -58,6 +58,8 @@ class Character:
     conditions: list[str]
     recovery_clock_ids: dict[str, str]
     mission_history: list[str]
+    backstory_hook: str | None = None
+    portrait_id: str | None = None
 
 
 @dataclass(slots=True)
