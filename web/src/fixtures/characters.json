@@ -1,0 +1,323 @@
+[
+  {
+    "id": "starting-pool-1",
+    "name": "Starting-Pool-1",
+    "stats": {
+      "STR": 14,
+      "DEX": 10,
+      "WIS": 7
+    },
+    "max_hp": 4,
+    "current_hp": 4,
+    "background": {
+      "name": "Former Soldier",
+      "stat_adjustments": {
+        "STR": 2,
+        "WIS": -1
+      },
+      "starting_equipment": [
+        "sword",
+        "shield",
+        "leather-armor"
+      ],
+      "incapabilities": [
+        "Cannot perform delicate/scholarly tasks"
+      ]
+    },
+    "traits": [
+      {
+        "name": "Greedy",
+        "roll_modifier": {
+          "loot": 1
+        },
+        "menu_tag_boosted": [
+          "loot",
+          "trade"
+        ],
+        "menu_tag_suppressed": [],
+        "stress_modifier": 0,
+        "vote_tendency": "banish on cost",
+        "contradicts": []
+      },
+      {
+        "name": "Cautious",
+        "roll_modifier": {
+          "safe": 1
+        },
+        "menu_tag_boosted": [],
+        "menu_tag_suppressed": [
+          "risky"
+        ],
+        "stress_modifier": 0,
+        "vote_tendency": "risk assessment",
+        "contradicts": [
+          "Bold"
+        ]
+      }
+    ],
+    "inventory": [
+      {
+        "id": "sword",
+        "name": "Sword",
+        "category": "Melee Weapons",
+        "stat_bonus": {
+          "STR": 1
+        },
+        "tier": 1,
+        "tags": [],
+        "armor_value": 0,
+        "uses_until_degradation": 5,
+        "is_provision": false
+      },
+      {
+        "id": "shield",
+        "name": "Shield",
+        "category": "Shield",
+        "stat_bonus": {},
+        "tier": 1,
+        "tags": [],
+        "armor_value": 2,
+        "uses_until_degradation": 5,
+        "is_provision": false
+      },
+      {
+        "id": "leather-armor",
+        "name": "Leather Armor",
+        "category": "Armor",
+        "stat_bonus": {},
+        "tier": 1,
+        "tags": [],
+        "armor_value": 1,
+        "uses_until_degradation": 5,
+        "is_provision": false
+      }
+    ],
+    "stress": 0,
+    "current_mission_id": null,
+    "conditions": [],
+    "recovery_clock_ids": {},
+    "mission_history": [],
+    "backstory_hook": null,
+    "portrait_id": null
+  },
+  {
+    "id": "starting-pool-2",
+    "name": "Starting-Pool-2",
+    "stats": {
+      "STR": 10,
+      "DEX": 15,
+      "WIS": 11
+    },
+    "max_hp": 4,
+    "current_hp": 4,
+    "background": {
+      "name": "Woodsman",
+      "stat_adjustments": {
+        "DEX": 2,
+        "WIS": -1
+      },
+      "starting_equipment": [
+        "shortbow",
+        "arrows",
+        "hunting-knife",
+        "trap-kit"
+      ],
+      "incapabilities": [
+        "Uncomfortable in cities"
+      ]
+    },
+    "traits": [
+      {
+        "name": "Cautious",
+        "roll_modifier": {
+          "safe": 1
+        },
+        "menu_tag_boosted": [],
+        "menu_tag_suppressed": [
+          "risky"
+        ],
+        "stress_modifier": 0,
+        "vote_tendency": "risk assessment",
+        "contradicts": [
+          "Bold"
+        ]
+      },
+      {
+        "name": "Greedy",
+        "roll_modifier": {
+          "loot": 1
+        },
+        "menu_tag_boosted": [
+          "loot",
+          "trade"
+        ],
+        "menu_tag_suppressed": [],
+        "stress_modifier": 0,
+        "vote_tendency": "banish on cost",
+        "contradicts": []
+      }
+    ],
+    "inventory": [
+      {
+        "id": "shortbow",
+        "name": "Shortbow",
+        "category": "Ranged Weapons",
+        "stat_bonus": {
+          "DEX": 1
+        },
+        "tier": 1,
+        "tags": [],
+        "armor_value": 0,
+        "uses_until_degradation": 5,
+        "is_provision": false
+      },
+      {
+        "id": "arrows",
+        "name": "Arrows",
+        "category": "Ranged Weapons",
+        "stat_bonus": {},
+        "tier": 1,
+        "tags": [],
+        "armor_value": 0,
+        "uses_until_degradation": 5,
+        "is_provision": false
+      },
+      {
+        "id": "hunting-knife",
+        "name": "Hunting Knife",
+        "category": "Melee Weapons",
+        "stat_bonus": {
+          "DEX": 1
+        },
+        "tier": 1,
+        "tags": [],
+        "armor_value": 0,
+        "uses_until_degradation": 5,
+        "is_provision": false
+      },
+      {
+        "id": "trap-kit",
+        "name": "Trap Kit",
+        "category": "Lockpick/Tools",
+        "stat_bonus": {
+          "DEX": 1
+        },
+        "tier": 1,
+        "tags": [],
+        "armor_value": 0,
+        "uses_until_degradation": 5,
+        "is_provision": false
+      }
+    ],
+    "stress": 0,
+    "current_mission_id": null,
+    "conditions": [],
+    "recovery_clock_ids": {},
+    "mission_history": [],
+    "backstory_hook": null,
+    "portrait_id": null
+  },
+  {
+    "id": "starting-pool-3",
+    "name": "Starting-Pool-3",
+    "stats": {
+      "STR": 10,
+      "DEX": 10,
+      "WIS": 16
+    },
+    "max_hp": 5,
+    "current_hp": 5,
+    "background": {
+      "name": "Traveling Herbalist",
+      "stat_adjustments": {
+        "WIS": 1,
+        "DEX": 1
+      },
+      "starting_equipment": [
+        "healer-s-kit",
+        "herb-pouch",
+        "walking-staff"
+      ],
+      "incapabilities": [
+        "Cannot wear heavy armor"
+      ]
+    },
+    "traits": [
+      {
+        "name": "Greedy",
+        "roll_modifier": {
+          "loot": 1
+        },
+        "menu_tag_boosted": [
+          "loot",
+          "trade"
+        ],
+        "menu_tag_suppressed": [],
+        "stress_modifier": 0,
+        "vote_tendency": "banish on cost",
+        "contradicts": []
+      },
+      {
+        "name": "Bold",
+        "roll_modifier": {
+          "risky": 1
+        },
+        "menu_tag_boosted": [],
+        "menu_tag_suppressed": [],
+        "stress_modifier": 0,
+        "vote_tendency": "keep",
+        "contradicts": [
+          "Cautious"
+        ]
+      }
+    ],
+    "inventory": [
+      {
+        "id": "healer-s-kit",
+        "name": "Healer's Kit",
+        "category": "Healer's Supplies",
+        "stat_bonus": {
+          "WIS": 2
+        },
+        "tier": 1,
+        "tags": [],
+        "armor_value": 0,
+        "uses_until_degradation": 5,
+        "is_provision": false
+      },
+      {
+        "id": "herb-pouch",
+        "name": "Herb Pouch",
+        "category": "Healer's Supplies",
+        "stat_bonus": {
+          "WIS": 1
+        },
+        "tier": 1,
+        "tags": [],
+        "armor_value": 0,
+        "uses_until_degradation": 5,
+        "is_provision": false
+      },
+      {
+        "id": "walking-staff",
+        "name": "Walking Staff",
+        "category": "Melee Weapons",
+        "stat_bonus": {
+          "DEX": 1
+        },
+        "tier": 1,
+        "tags": [],
+        "armor_value": 0,
+        "uses_until_degradation": 5,
+        "is_provision": false
+      }
+    ],
+    "stress": 0,
+    "current_mission_id": null,
+    "conditions": [],
+    "recovery_clock_ids": {},
+    "mission_history": [],
+    "backstory_hook": null,
+    "portrait_id": null
+  }
+]
