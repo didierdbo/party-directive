@@ -6,6 +6,28 @@
 
 ---
 
+## Project framing (as of 2026-04-24)
+
+- **CharacterCard = admin dev tool.** It exists to dogfood the data contract
+  coming out of the Python simulator and to teach React fundamentals. It is
+  **NOT** the eventual player-facing UI.
+- **Player-facing UI = future Project 2** (diegetic — no visible stat numbers,
+  prose descriptors, portraits, behavioral telegraphing). See Varn's design doc
+  when published.
+
+### Implications for coaching
+
+1. **Low polish bar on CharacterCard.tsx.** No styling investment, no
+   illustration, no player-pretty visuals. Scaffolding only — audience is the
+   owner inspecting game state.
+2. **Lessons unchanged.** Composition, conditional rendering, state, effects,
+   TanStack Query, routing — all stay on plan. The component just happens to
+   be admin-only.
+3. **Project 2 is where polish lives.** Different visual language, possibly
+   different component decomposition, same React skills underneath.
+
+---
+
 ## Current lesson: 1.1 — Character Card Viewer
 
 ### Goal
