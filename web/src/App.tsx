@@ -1,14 +1,19 @@
 // Party Directive — web companion app.
 
 import CharacterCard from "./components/CharacterCard";
+import { characters } from "@/fixtures/fixtureCharacters"
 
 // Kept intentionally empty until Lesson 1.1 (Character Card Viewer).
 export default function App() {
+
   return (
-    <main>
+    <>
       <h1>Party Directive</h1>
       <p>Web companion — scaffold ready. First lesson: Character Card Viewer.</p>
-      <CharacterCard/>
-    </main>
+
+      { characters.map(c => <CharacterCard key={c.id} character={c} />) }
+
+
+    </>
   )
 }
